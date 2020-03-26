@@ -420,7 +420,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <!-- <p>在Hexo中使用数学公式的需求并不高，但在解释问题时又不可避免会用到公式, 所以我在建立这个Hexo博客的时候，花了点时间浏览Hexo的公式渲染引擎。</p>
+        <p>在Hexo中使用数学公式的需求并不高，但在解释问题时又不可避免会用到公式, 所以我在建立这个Hexo博客的时候，花了点时间浏览Hexo的公式渲染引擎。</p>
 <p>Hexo的plugin使用MathJax/KaTeX来渲染公私，其中KaTeX不依赖javascript,而是在server段处渲染，小而快，但公式支持不全。网络上关于MathJax的资料更多，我刚开始也是打算使用MathJax。但看几个博客试着渲染，都没有成功。</p>
 <p>我总结了一下可能导致失败的原因，其一是有些安装说明的文章并没有解释是将 <code>npm install hexo-math --save</code> 在根目录文件下安装，还是在模板目录文件下安装，这对了解npm和hexo结构的人很好解决，但我第一次接触，对此感到困惑； 其二是以下的代码是插入根目录文件还是模板目录文件里的<code>_config.yml</code> <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">'mathjax'</span> <span class="comment"># or 'katex'</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">src:</span> <span class="string">custom_mathjax_source</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="comment"># MathJax config</span></span><br><span class="line">  <span class="attr">katex:</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">custom_css_source</span></span><br><span class="line">    <span class="attr">js:</span> <span class="string">custom_js_source</span> <span class="comment"># not used</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="comment"># KaTeX config</span></span><br></pre></td></tr></table></figure> 最后，即便我将推荐步骤逐一完成后，还是不能成功渲染公式。</p>
 <p>于是我放弃使用hexo-math, 毕竟我的目的是用很短时间里搭建一个个人博客，并做出几个我需要的基本功能。好在我使用的这个模板有<a href="https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Latex-%E6%94%AF%E6%8C%81" target="_blank" rel="noopener">wiki</a>，其中就包含使用latex在hexo中渲染的推荐链接，第一个链接足够解决这个问题。接下来我会解释我是怎么解决数学公式渲染问题，希望大家能少走弯路。</p>
@@ -455,7 +455,7 @@ a &amp;= b + c \\
 <p>More info: <a href="https://nathaniel.blog/tutorials/make-hexo-support-math-again/" target="_blank" rel="noopener">Make Hexo Support Math Again</a>, <a href="https://github.com/fi3ework/hexo-theme-archer/wiki/%E5%90%AF%E7%94%A8-Latex-%E6%94%AF%E6%8C%81" target="_blank" rel="noopener">hexo-theme-archer wiki</a></p>
 
             <!-- donate -->
-            
+            <!-- 
                 <! -- 添加捐赠图标 -->
 <div class ="post-donate">
     <div id="donate_board" class="donate_bar center">
