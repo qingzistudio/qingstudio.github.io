@@ -225,6 +225,16 @@ window.addEventListener('load', function (event) {
 // fancybox
 
 (0, _fancybox.default)();
+$('#wechat').hover();
+
+document.getElementById('btn_donate').onclick = function () {
+  // $('#donate_board').addClass('hidden');
+  if ($('#donate_guide').hasClass('hidden')) {
+    $('#donate_guide').removeClass('hidden');
+  } else {
+    $('#donate_guide').addClass('hidden');
+  }
+};
 
 /***/ }),
 /* 3 */
@@ -818,7 +828,9 @@ var Selector = function Selector(classPrefix) {
   };
 };
 
-var Sidebar = /*#__PURE__*/function () {
+var Sidebar =
+/*#__PURE__*/
+function () {
   function Sidebar(options) {
     _classCallCheck(this, Sidebar);
 
@@ -2355,13 +2367,7 @@ var _util2 = __webpack_require__(11);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2369,7 +2375,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var MetaInfo = /*#__PURE__*/function () {
+var MetaInfo =
+/*#__PURE__*/
+function () {
   function MetaInfo(metaName, labelsContainer, postContainer) {
     _classCallCheck(this, MetaInfo);
 
@@ -2505,7 +2513,9 @@ var MetaInfo = /*#__PURE__*/function () {
   return MetaInfo;
 }();
 
-var SidebarMeta = /*#__PURE__*/function () {
+var SidebarMeta =
+/*#__PURE__*/
+function () {
   function SidebarMeta(tabCount) {
     _classCallCheck(this, SidebarMeta);
 
@@ -3826,13 +3836,7 @@ var _util = _interopRequireDefault(__webpack_require__(0));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
-
-function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var prevHeight = 0;
 
