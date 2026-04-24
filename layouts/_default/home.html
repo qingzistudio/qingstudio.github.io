@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{ partial "breadcrumb.html" . }}
+
+{{ with .Site.Params.profile }}
+  <section class="home-profile" aria-label="Profile">
+    <div class="home-profile-copy">
+      <!-- <div class="home-profile-name">{{ .name }}</div> -->
+      <h1>{{ .headline }}</h1>
+      <p>{{ .intro }}</p>
+      <!-- <p class="home-profile-signature">{{ .signature }}</p> -->
+      {{ with .links }}
+        <div class="home-profile-links">
+          {{ range . }}
+            <a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+    {{ with .avatar }}
+      <div class="home-profile-avatar">
+        <img src="{{ . }}" alt="Qing Wei avatar">
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{ if .Site.Params.showMainImage }}
+  <div class="main-image">
+    <img
+      src="{{ .Site.Params.mainImageUrl }}"
+      alt="Main Image"
+    />
+  </div>
+{{ end }}
+
+{{ if and .Site.Params.showGithubChart .Site.Params.githubUsername .Site.Params.primaryColor }}
+  {{ $color := .Site.Params.primaryColor | replaceRE "^#" "" }}
+  <div class="commit">
+    <img
+      src="https://ghchart.rshah.org/{{ $color }}/{{ .Site.Params.githubUsername }}"
+    />
+  </div>
+{{ end }}
+
+<div class="home-content">
+  {{ .Content }}
+</div>
+
+<div class="posts-list">
+  {{ range first 10 .Site.RegularPages }}
+    <div class="post-title">
+      <a href="{{ .RelPermalink }}">- {{ .LinkTitle }}</a>
+      <small>{{ .Date | time.Format "2006.01.02" }}</small>
+    </div>
+  {{ end }}
+</div>
+
+{{ end }}
