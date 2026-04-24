@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title> EmotionAnalysis </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../emotion_task/assets/normalize.css">
+    <link rel="stylesheet" href="../emotion_task/assets/temp02-style.css">
+<!--     <link rel="stylesheet" href="../assets/css/wordmove.css">
+ --></head>
+
+  <body>
+
+  <article>
+    <header class="article-header">  
+      <svg viewBox="0 0 560 168" class="header-lockup">
+<!-- The transform attribute defines a list of transform definitions that are applied to an element and the element's children
+ -->
+        <text transform="matrix(1 0 0 1 7 126.14385)"><tspan x="80" y="-45" font-family='Righteous' font-size="70px">QING</tspan> 
+        <tspan x="150" y="28" font-family='Righteous' font-size="69px">JOURNAL</tspan>
+        </text>
+        <circle id='headcircle' fill= '#e64040' stroke="#e64040" stroke-width = '4' cx="250" cy="91" r="22"/>
+        <text class="words animate-right" transform="matrix(1 0 0 1 235.5 102.4)">
+        <tspan  x="0" y="0" font-family='Pacifico' font-size="22px" fill='white'>'S</tspan>
+        </text> 
+      </svg>
+
+      <h2>
+        EMOTION ANALYSIS ON CUSTOMER REVIEWS
+       </h2>
+      <div class="byline">
+        Sentiment Analysis · Machine Learning · Python · D3.js
+       </div>
+
+      
+    </header>
+
+    <div class="page-wrap">
+
+<!--       <div class="intro-ps">
+      <p><strong></strong> </p>
+      <p></p>
+      <p></p>
+      </div>  -->
+
+      <aside class="in-brief">
+        <h3>In Brief</h3>
+        <div class="in-brief-content">
+       <p>Companies care about customer attitudes to their server. Nowadays, the online stores like Amazon.com and social networking websites provide large enough reviews from customers, or potential customers for analysis. It costs much less to grasp interesting information from internet and build models on those data. Methods like Sentiment Analysis, Networking Analysis are popular ways to  realizing emotion conveyed by customers' voice. 
+      </p>
+      <p>
+       Emotion Analysis I used here is for selecting special nouns which are corresponding to 8 types of emotions: <strong>Anger, Anticipation, Disgust, Fear, Joy, Sadness, Surprise and Trust</strong>. In another word, we want to get 8 lists of nouns for all emotion types, each of the lists refers to the frequencies of nouns in reviews. the reviews are wrote for one diabetes product sale at Amazon.</p>
+        </div>  
+      </aside>
+
+      <div class="article-body">
+        <h1>Highest Frequency Nouns Based On Emotion Types</h1>
+          <div class="container">
+            <div class="row ">             
+                <div class="col-md-5" id="heatmap" > </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <ul class="bigtext">
+                        <li>There are 19 nouns at the vertical axis, and 8 emotion types lie on the horizontal axis.</li>
+                        <li>Size and color of circles refers to the frequencies:
+                            <ul> 
+                            <li>There are 423 'bg', 'work', 'level', 'number' and 'aid' appear in <strong>Anticipation</strong> emotion. </li>
+                            <li>'blood', 'day', 'doctor', 'english', 'im', 'insulin', 'just', 'lot', 'month', 'sugar', 'test', 'time', 'type' and 'year' are the high frequency nouns in <strong>All</strong> emotion. </li>
+                            <li>'dont', 'feel', 'want', 'way', 'week' are high frequency nouns in <strong>All but Anticipation</strong> emotion. </li>
+                            <li>Click circles, nouns and emtions part to get the exact numbers. </li>
+                            </ul>
+                        </li>
+                    </ul>
+                   <!--  <ul class="list-unstyled smalltext">
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Word Cloud</h1>
+      <div class="container">
+          <div class="row ">             
+              <div class="col-md-5"> 
+                  <ul class="bigtext">
+                      <li>All the nouns appear more than 5 times per emotion type </li>
+                      <li>Size and color of circles refers to the frequencies
+<!--                           <ul>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                          </ul> -->
+                      </li>
+                  </ul>
+                  <ul class="list-unstyled smalltext">
+                      <li></li>
+                  </ul></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-6" id='word-cloud'> 
+                <div id="droplist">
+                  <b>Select One Emotion Here:</b>
+                  <br>
+                </div>
+              </div>
+            </div>
+                   
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+<!--         <section>
+            <div class="words animate-right">
+              <span>qingweiblog.com</span>
+            </div>
+        </section> -->
+
+  </article>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../emotion_task/assets/jquery-3.3.1.min.js"></script>
+  <script src="../emotion_task/assets/d3.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="../emotion_task/assets/freqheatmap.js"></script>
+  <script type="text/javascript" src="../emotion_task/assets/d3.layout.cloud.js"></script>
+  <script type="text/javascript" src="../emotion_task/assets/wordcloud.js"></script>
+
+
+  </body>
+</html>

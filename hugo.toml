@@ -36,6 +36,7 @@ weight = 30
   showMainImage = true
 
 [taxonomies]
+  category = 'categories'
   tag = 'tags'
 
 [markup]
