@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "breadcrumb.html" . }}
+
 
 {{ with .Site.Params.profile }}
   <section class="home-profile" aria-label="Profile">
@@ -8,7 +8,7 @@
       <!-- <div class="home-profile-name">{{ .name }}</div> -->
       <h1>{{ .headline }}</h1>
       <p>{{ .intro }}</p>
-      <!-- <p class="home-profile-signature">{{ .signature }}</p> -->
+      <p class="home-profile-signature">{{ .signature }}</p>
       {{ with .links }}
         <div class="home-profile-links">
           {{ range . }}
@@ -25,6 +25,7 @@
   </section>
 {{ end }}
 
+<!-- {{ partial "breadcrumb.html" . }} -->
 {{ if .Site.Params.showMainImage }}
   <div class="main-image">
     <img

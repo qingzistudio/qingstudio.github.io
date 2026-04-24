@@ -21,7 +21,7 @@
       <nav class="post-nav" aria-label="Post navigation">
         {{ with .PrevInSection }}
           <a class="post-nav-link post-nav-prev" href="{{ .RelPermalink }}">
-            <small>Previous post</small>
+            <small> < Previous post</small>
             <span>{{ .Title }}</span>
           </a>
         {{ else }}
@@ -29,7 +29,7 @@
         {{ end }}
         {{ with .NextInSection }}
           <a class="post-nav-link post-nav-next" href="{{ .RelPermalink }}">
-            <small>Next post</small>
+            <small>Next post > </small>
             <span>{{ .Title }}</span>
           </a>
         {{ end }}

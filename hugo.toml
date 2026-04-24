@@ -38,8 +38,8 @@ weight = 30
   [params.profile]
     avatar = '/avatar/jellyfish.gif'
     name = 'Qing Wei'
-    headline = 'Code with ME'
-    intro = '这是一个半路出家的码农的博客。现在是个数据工程师，记录代码、建模、数学笔记和一点点可爱的混乱。'
+    headline = 'Build in Public, Think in Private'
+    intro = '数据工程师，记录代码、建模、数学笔记和混乱。'
     signature = "Get drunk! Don't be martyred slaves of Time"
 
     [[params.profile.links]]

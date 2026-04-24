@@ -8,16 +8,25 @@
 
 .home-profile {
   align-items: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fffdf6 0,
+    #fffdf6 12px,
+    #fff7df 12px,
+    #fff7df 24px
+  );
+  border-radius: 4px;
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(0, 1fr) auto;
   margin: 1.75rem 0 2rem;
+  padding: 1.25rem;
 }
 
 .home-profile-copy h1 {
   border-bottom: 0;
   font-family: var(--title-font-family);
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   line-height: 1.35;
   margin: 0 0 0.75rem;
   padding-bottom: 0;
