@@ -1,20 +1,22 @@
 .post-nav {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 1rem;
+  align-items: start;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
   margin: 4rem auto 2rem;
   max-width: 760px;
   width: min(92vw, 760px);
 }
 
 .post-nav-link {
-  border: 1px solid var(--primary-color);
   color: inherit;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  min-height: 5.25rem;
-  padding: 1rem;
+  max-width: 18rem;
+  min-width: 0;
+  padding: 0;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -30,20 +32,14 @@
   overflow-wrap: anywhere;
 }
 
-.post-nav-next {
-  text-align: right;
-}
-
 @media (max-width: 600px) {
   .post-nav {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
   }
 
   .post-nav > span {
     display: none;
-  }
-
-  .post-nav-next {
-    text-align: left;
   }
 }
