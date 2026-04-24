@@ -1,11 +1,9 @@
 .post-nav {
-  align-items: start;
-  display: flex;
-  gap: 2.5rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 2rem;
   margin: 4rem auto 2rem;
-  max-width: 760px;
-  width: min(92vw, 760px);
+  width: 100%;
 }
 
 .post-nav-link {
@@ -13,11 +11,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  max-width: 18rem;
   min-width: 0;
   padding: 0;
-  text-align: center;
   text-decoration: none;
+}
+
+.post-nav-prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.post-nav-next {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .post-nav-link small {
@@ -34,12 +40,16 @@
 
 @media (max-width: 600px) {
   .post-nav {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
-    align-items: center;
   }
 
   .post-nav > span {
     display: none;
+  }
+
+  .post-nav-link {
+    align-items: flex-start;
+    text-align: left;
   }
 }
