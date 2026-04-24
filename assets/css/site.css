@@ -1,0 +1,148 @@
+.post-nav {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 2rem;
+  margin: 4rem auto 2rem;
+  width: 100%;
+}
+
+.home-profile {
+  align-items: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fffdf6 0,
+    #fffdf6 12px,
+    #fff7df 12px,
+    #fff7df 24px
+  );
+  border-radius: 4px;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 1.75rem 0 2rem;
+  padding: 1.25rem;
+}
+
+.home-profile-copy h1 {
+  border-bottom: 0;
+  font-family: var(--title-font-family);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0;
+}
+
+.home-profile-name {
+  color: var(--primary-color);
+  font-family: var(--title-font-family);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.home-profile-copy p {
+  margin: 0 0 0.75rem;
+}
+
+.home-profile-signature {
+  color: var(--mgray-color);
+  font-size: 0.9rem;
+}
+
+.home-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-family: var(--title-font-family);
+  font-size: 0.8rem;
+}
+
+.home-profile-links a {
+  color: var(--primary-color);
+}
+
+.home-profile-avatar {
+  justify-self: end;
+}
+
+.home-profile-avatar img {
+  aspect-ratio: 1;
+  display: block;
+  height: 8.5rem;
+  object-fit: cover;
+  width: 8.5rem;
+}
+
+body {
+  padding-top: 5.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  scroll-margin-top: 5.25rem;
+}
+
+.post-nav-link {
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.post-nav-prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.post-nav-next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.post-nav-link small {
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-nav-link span {
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .home-profile {
+    grid-template-columns: 1fr;
+  }
+
+  .home-profile-avatar {
+    justify-self: start;
+  }
+
+  .home-profile-avatar img {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .post-nav > span {
+    display: none;
+  }
+
+  .post-nav-link {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
